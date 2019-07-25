@@ -1,0 +1,10 @@
+name: WolfyTimber
+version: 2.1.0
+author: WolfyScript
+depend:
+  - CustomCrafting
+
+main: me.wolfyscript.timber.Main
+
+commands:
+  timber:
