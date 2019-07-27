@@ -1,10 +1,10 @@
 package me.wolfyscript.timber.configs;
 
 import me.wolfyscript.customcrafting.CustomCrafting;
-import me.wolfyscript.timber.WolfyTimber;
 import me.wolfyscript.utilities.api.WolfyUtilities;
 import me.wolfyscript.utilities.api.config.Config;
 import me.wolfyscript.utilities.api.config.ConfigAPI;
+import me.wolfyscript.utilities.api.config.templates.LangConfiguration;
 import me.wolfyscript.utilities.api.language.Language;
 import me.wolfyscript.utilities.api.language.LanguageAPI;
 
@@ -24,6 +24,8 @@ public class ConfigHandler {
 
     public void load(){
         this.timberConfig = new TimberConfig(configAPI);
+        timberConfig.loadDefaults();
+        timberConfig.reload();
         loadLang();
 
 
@@ -33,9 +35,9 @@ public class ConfigHandler {
         String lang = timberConfig.getLang();
         Config langConf;
         if (CustomCrafting.getInst().getResource("me/wolfyscript/timber/configs/lang/" + lang + ".yml") != null) {
-            langConf = new Config(configAPI, "me/wolfyscript/timber/configs/lang", WolfyTimber.getInstance().getDataFolder().getPath() + "/lang", lang, true);
+            langConf = new LangConfiguration(configAPI, lang, "me/wolfyscript/timber/configs/lang", lang, "json", false);
         } else {
-            langConf = new Config(configAPI, "me/wolfyscript/timber/configs/lang", "en_US", WolfyTimber.getInstance().getDataFolder().getPath() + "/lang", lang, false);
+            langConf = new LangConfiguration(configAPI, "en_US", "me/wolfyscript/timber/configs/lang", lang, "json", false);
         }
         langConf.loadDefaults();
 

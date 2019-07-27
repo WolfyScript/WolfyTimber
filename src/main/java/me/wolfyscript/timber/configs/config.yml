@@ -1,1 +1,14 @@
 language: en_US
+debug: false
+
+timber:
+  woodSensitive: true
+  cutLeaves: true
+  max_blocks: 256
+
+vanilla_axes:
+  enabled:
+    - STONE_AXE
+    - IRON_AXE
+    - GOLD_AXE
+    - DIAMOND_AXE
