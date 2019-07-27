@@ -34,6 +34,10 @@ public class TimberConfig extends Config {
         return getInt("timber.max_blocks");
     }
 
+    public int bypassMaxBlocks(){
+        return getInt("timber.bypass_maxBlocks");
+    }
+
     public List<Material> getEnabledVanillaAxes(){
         List<Material> list = new ArrayList<>();
         getStringList("vanilla_axes.enabled").forEach(s -> {

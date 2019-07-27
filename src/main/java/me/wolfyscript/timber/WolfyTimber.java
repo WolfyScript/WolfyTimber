@@ -47,4 +47,12 @@ public class WolfyTimber extends JavaPlugin {
     public static WolfyUtilities getApi() {
         return api;
     }
+
+    public static String getVersion(){
+        return instance.getDescription().getVersion();
+    }
+
+    public static int getVersionNumber(){
+        return Integer.parseInt(getVersion().replace("\\.", ""));
+    }
 }

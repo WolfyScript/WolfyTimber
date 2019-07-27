@@ -27,8 +27,6 @@ public class ConfigHandler {
         timberConfig.loadDefaults();
         timberConfig.reload();
         loadLang();
-
-
     }
 
     public void loadLang(){

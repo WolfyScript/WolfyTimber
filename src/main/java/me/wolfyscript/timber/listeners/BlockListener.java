@@ -2,7 +2,7 @@ package me.wolfyscript.timber.listeners;
 
 import me.wolfyscript.timber.Timber;
 import me.wolfyscript.timber.WolfyTimber;
-import org.bukkit.Material;
+import me.wolfyscript.timber.handler.TimberAxeHandler;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -23,7 +23,7 @@ public class BlockListener implements Listener {
         Block current = e.getBlock();
         Player p = e.getPlayer();
         ItemStack is = p.getInventory().getItemInMainHand();
-        if (is.getType().equals(Material.DIAMOND_AXE)) {
+        if (TimberAxeHandler.isTimberAxe(is)) {
             if (current.getType().toString().endsWith("_LOG") && !e.getPlayer().isSneaking()) {
                 if(!timbers.containsKey(p.getUniqueId())){
                     Timber timber = new Timber(current, p);

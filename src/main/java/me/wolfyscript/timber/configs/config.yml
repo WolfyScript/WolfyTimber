@@ -5,6 +5,7 @@ timber:
   woodSensitive: true
   cutLeaves: true
   max_blocks: 256
+  bypass_maxBlocks: 10000
 
 vanilla_axes:
   enabled:

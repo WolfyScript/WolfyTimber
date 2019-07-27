@@ -44,7 +44,7 @@ public class Timber {
     }
 
     public void breakTree() {
-        int maxBlocks = WolfyUtilities.hasPermission(player, "wolfytimber.limit_bypass") ? 83072 : WolfyTimber.getSettings().maxBlocks();
+        int maxBlocks = WolfyUtilities.hasPermission(player, "wolfytimber.limit_bypass") ? WolfyTimber.getSettings().bypassMaxBlocks() : WolfyTimber.getSettings().maxBlocks();
         this.task = new BukkitRunnable(){
             @Override
             public void run() {
