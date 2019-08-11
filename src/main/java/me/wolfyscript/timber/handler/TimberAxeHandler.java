@@ -2,7 +2,6 @@ package me.wolfyscript.timber.handler;
 
 import me.wolfyscript.timber.WolfyTimber;
 import me.wolfyscript.utilities.api.WolfyUtilities;
-import me.wolfyscript.utilities.api.utils.ItemUtils;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.List;
